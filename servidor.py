@@ -16,14 +16,13 @@ while True:
     from datetime import datetime
     datahora = datetime.now()
     reg = "Cliente:"+str(cliente)+" Data/Hora:"+str(datahora)+" Ip:"+str(addr[0]+ "   \n" )
-    arq = open('/tmp/log.txt', 'w' )
+    arq = open('/tmp/arqlog.txt', 'w' )
     registro.append(reg)
     arq.writelines(registro ) 
-    arq = open('/tmp/log.txt', 'r')
+    arq = open('/tmp/arqlog.txt', 'r')
     registro = arq.readlines()
     for linha in registro:
        print (linha )
     arq.close() 
 client.close()
 tcp_server_socket.close()
-
